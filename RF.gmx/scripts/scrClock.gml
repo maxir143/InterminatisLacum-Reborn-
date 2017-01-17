@@ -1,0 +1,1 @@
+oAdmin.Clock = !oAdmin.Clock

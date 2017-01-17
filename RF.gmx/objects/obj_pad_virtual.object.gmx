@@ -25,14 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>stick_1 = 0;
-vstick_init(stick_1,x,y,40,1,spr_pad_virtual,spr_pad_virtual_2)// adds a joystick. Only has to be called once.
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -50,32 +48,7 @@ vstick_init(stick_1,x,y,40,1,spr_pad_virtual,spr_pad_virtual_2)// adds a joystic
           <argument>
             <kind>1</kind>
             <string>vstick_step(stick_1)// handles the logic.
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>vstick_draw(stick_1)// draws the joystick.
-/*
-draw_text(x+64,y,vstick_get_yaxis(stick_1))
-draw_text(x+128,y,vstick_get_xaxis(stick_1))
+vstick_draw(stick_1)// draws the joystick.
 </string>
           </argument>
         </arguments>

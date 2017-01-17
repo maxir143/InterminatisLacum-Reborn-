@@ -325,7 +325,7 @@ alarm[3] = room_speed * 2.5
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_disparo">
+    <event eventtype="4" ename="oTear">
       <action>
         <libid>1</libid>
         <id>603</id>

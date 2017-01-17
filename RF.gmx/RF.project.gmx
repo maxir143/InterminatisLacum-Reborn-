@@ -7,7 +7,6 @@
     <extension index="0">extensions\Virtual Joysticks</extension>
     <extension index="1">extensions\GooglePlayServicesExtension</extension>
     <extension index="2">extensions\GooglePlayLicensingAsExt</extension>
-    <extension index="3">extensions\MogaExtensionAndroid</extension>
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\snd_back_1</sound>
@@ -68,43 +67,37 @@
       <sprite>sprites\sprite50</sprite>
     </sprites>
     <sprites name="escenario">
-      <sprite>sprites\sprite9</sprite>
-      <sprite>sprites\sprite10</sprite>
-      <sprite>sprites\spr_moneda</sprite>
-      <sprite>sprites\spr_corazones</sprite>
-      <sprite>sprites\spr_llaves</sprite>
-      <sprite>sprites\spr_campfire</sprite>
-      <sprite>sprites\spr_fuego_0</sprite>
-      <sprite>sprites\spr_fuego_1</sprite>
-      <sprite>sprites\spr_fuego_2</sprite>
-      <sprite>sprites\sprite65</sprite>
-      <sprite>sprites\spr_pinchos</sprite>
-      <sprite>sprites\sprite24</sprite>
-      <sprite>sprites\spr_pared</sprite>
-      <sprite>sprites\spr_particulas_enemigos</sprite>
-      <sprite>sprites\spr_particulas_objetos</sprite>
-      <sprite>sprites\spr_particula_power_up</sprite>
-      <sprite>sprites\sprite11</sprite>
-      <sprite>sprites\sprite80</sprite>
-      <sprite>sprites\sprite62</sprite>
-      <sprite>sprites\spr_puerta_boss</sprite>
+      <sprite>sprites\sPoop</sprite>
+      <sprite>sprites\sCoin</sprite>
+      <sprite>sprites\sHeart</sprite>
+      <sprite>sprites\sKey</sprite>
+      <sprite>sprites\sCampfire</sprite>
+      <sprite>sprites\sFire</sprite>
+      <sprite>sprites\sDonation</sprite>
+      <sprite>sprites\sSpikes</sprite>
+      <sprite>sprites\sRock</sprite>
+      <sprite>sprites\sWall</sprite>
+      <sprite>sprites\sEnemyParticle</sprite>
+      <sprite>sprites\sObjectParticle</sprite>
+      <sprite>sprites\sPowerUpParticle</sprite>
+      <sprite>sprites\sNormalDoor</sprite>
+      <sprite>sprites\sGoldenDoor</sprite>
+      <sprite>sprites\sBossDoor</sprite>
+      <sprite>sprites\sFinalDoor</sprite>
     </sprites>
     <sprites name="personaje">
-      <sprite>sprites\spr_personaje</sprite>
-      <sprite>sprites\spr_cuerpo</sprite>
-      <sprite>sprites\sprite18</sprite>
-      <sprite>sprites\sprite5</sprite>
-      <sprite>sprites\spr_particula_bala</sprite>
-      <sprite>sprites\sprite76</sprite>
+      <sprite>sprites\sPlayerHead</sprite>
+      <sprite>sprites\sPlayerBody</sprite>
+      <sprite>sprites\sPlayerShadow</sprite>
+      <sprite>sprites\sprTear</sprite>
+      <sprite>sprites\sprTearShoot</sprite>
     </sprites>
     <sprites name="botones">
-      <sprite>sprites\spr_pad_flechas</sprite>
-      <sprite>sprites\spr_pad_2</sprite>
-      <sprite>sprites\spr_tab</sprite>
-      <sprite>sprites\spr_pausa</sprite>
-      <sprite>sprites\srp_login</sprite>
-      <sprite>sprites\spr_pad_virtual_2</sprite>
-      <sprite>sprites\spr_pad_virtual</sprite>
+      <sprite>sprites\sInfo</sprite>
+      <sprite>sprites\sPause</sprite>
+      <sprite>sprites\sGoogleLogin</sprite>
+      <sprite>sprites\sPadFrontSprite</sprite>
+      <sprite>sprites\sPadBackSprite</sprite>
     </sprites>
     <sprites name="extra">
       <sprite>sprites\spr_personaje_vs</sprite>
@@ -113,12 +106,13 @@
       <sprite>sprites\spr_vs</sprite>
       <sprite>sprites\srp_powerup_mask</sprite>
       <sprite>sprites\spr_mask_pared</sprite>
-      <sprite>sprites\sprite58</sprite>
+      <sprite>sprites\sprPlaceHolder</sprite>
       <sprite>sprites\sprite17</sprite>
       <sprite>sprites\sprite4</sprite>
       <sprite>sprites\sprite15</sprite>
       <sprite>sprites\spr_menu</sprite>
       <sprite>sprites\spr_seed_mask</sprite>
+      <sprite>sprites\sprPads</sprite>
     </sprites>
     <sprites name="num_pad">
       <sprite>sprites\spr_num_1</sprite>
@@ -133,28 +127,19 @@
     <background>background\back_6</background>
     <background>background\back_7</background>
   </backgrounds>
-  <paths name="paths">
-    <path>paths\pth_circulo</path>
-  </paths>
+  <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\levitar_objetos.gml</script>
-    <script>scripts\puertas_boss.gml</script>
-    <script>scripts\powerup_puntos.gml</script>
-    <script>scripts\scr_depth.gml</script>
-    <script>scripts\enemigos_puntos.gml</script>
+    <scripts name="antes">
+      <script>scripts\puertas_boss.gml</script>
+      <script>scripts\scr_depth.gml</script>
+      <script>scripts\enemigos_puntos.gml</script>
+      <script>scripts\scrAndroidSync.gml</script>
+      <script>scripts\powerup_puntos.gml</script>
+      <script>scripts\levitar_objetos.gml</script>
+    </scripts>
     <scripts name="Virtual Joystick">
-      <script>scripts\vstick_set_frontsprite.gml</script>
-      <script>scripts\vstick_get_frontsprite.gml</script>
-      <script>scripts\vstick_set_backsprite.gml</script>
-      <script>scripts\vstick_get_backsprite.gml</script>
       <script>scripts\vstick_get_active.gml</script>
-      <script>scripts\vstick_set_active.gml</script>
-      <script>scripts\vstick_set_radius.gml</script>
-      <script>scripts\vstick_get_radius.gml</script>
-      <script>scripts\vstick_set_y.gml</script>
-      <script>scripts\vstick_get_y.gml</script>
       <script>scripts\vstick_set_x.gml</script>
-      <script>scripts\vstick_get_x.gml</script>
       <script>scripts\vstick_get_yaxis.gml</script>
       <script>scripts\vstick_get_xaxis.gml</script>
       <script>scripts\vstick_get_direction.gml</script>
@@ -165,8 +150,22 @@
       <script>scripts\vstick_draw.gml</script>
       <script>scripts\vstick_step.gml</script>
       <script>scripts\vstick_init.gml</script>
+      <script>scripts\vstick_set_y.gml</script>
     </scripts>
-    <script>scripts\scrAndroidSync.gml</script>
+    <scripts name="Player">
+      <script>scripts\scrShoot.gml</script>
+      <script>scripts\scrDrawStats.gml</script>
+    </scripts>
+    <scripts name="Enemy">
+      <script>scripts\scrEnemyMove.gml</script>
+    </scripts>
+    <scripts name="Extra">
+      <scripts name="Clock">
+        <script>scripts\scrClock.gml</script>
+        <script>scripts\scrClockReset.gml</script>
+        <script>scripts\scrClockGet.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_debug</font>
@@ -176,23 +175,15 @@
     <font>fonts\fnt_numpad</font>
   </fonts>
   <objects name="objects">
-    <objects name="controladores">
-      <object>objects\obj_controlador</object>
-      <object>objects\obj_seed</object>
-      <object>objects\obj_menu</object>
-      <object>objects\obj_start</object>
-      <object>objects\obj_fade</object>
+    <objects name="Admin">
+      <object>objects\oAdmin</object>
       <object>objects\obj_relog</object>
-      <object>objects\obj_creador__enemigos</object>
-      <object>objects\obj_login</object>
-      <object>objects\obj_pausa</object>
-      <object>objects\obj_help</object>
-      <object>objects\obj_creador_objetos</object>
-      <object>objects\obj_creador_boss</object>
-      <object>objects\obj_powerup_tesoro</object>
-      <object>objects\obj_powerup_boss</object>
-      <object>objects\obj_powerup_donacion</object>
-      <objects name="num_pad">
+      <objects name="Menu">
+        <object>objects\obj_menu</object>
+        <object>objects\obj_login</object>
+        <object>objects\obj_seed</object>
+      </objects>
+      <objects name="SeedNumpad">
         <object>objects\obj_numpad_parent</object>
         <object>objects\obj_num_0</object>
         <object>objects\obj_num_1</object>
@@ -205,104 +196,67 @@
         <object>objects\obj_num_8</object>
         <object>objects\obj_num_9</object>
       </objects>
+      <objects name="virtual_pad">
+        <object>objects\oPadManager</object>
+        <object>objects\oStats</object>
+        <object>objects\oPause</object>
+      </objects>
+    </objects>
+    <objects name="Player">
+      <object>objects\oPlayerHead</object>
+      <object>objects\oPlayerBody</object>
+      <object>objects\oPlayer</object>
+      <object>objects\oTear</object>
     </objects>
     <objects name="mascaras">
       <object>objects\obj_enemigo</object>
-      <object>objects\obj_solido</object>
-      <object>objects\obj_Entidad</object>
-    </objects>
-    <objects name="personaje">
-      <object>objects\obj_pies</object>
-      <object>objects\obj_personaje</object>
-      <object>objects\obj_sombra</object>
-      <object>objects\obj_disparo</object>
-      <object>objects\obj_particula_bala_1</object>
-      <objects name="virtual_pad">
-        <object>objects\obj_pad</object>
-        <object>objects\obj_pad_virtual</object>
-        <object>objects\obj_pad_virtual_shoot</object>
-        <object>objects\obj_pad_2</object>
-        <object>objects\obj_tab</object>
-        <object>objects\obj_esc</object>
-      </objects>
+      <object>objects\oSolid</object>
+      <object>objects\oEntity</object>
+      <object>objects\oButtonMask</object>
+      <object>objects\oEnemy</object>
     </objects>
     <objects name="puertas">
-      <object>objects\obj_puerta_up</object>
-      <object>objects\obj_puerta_right</object>
-      <object>objects\obj_puerta_down</object>
-      <object>objects\obj_puerta_left</object>
-      <object>objects\obj_puerta_return</object>
+      <object>objects\oDoor</object>
     </objects>
     <objects name="escenario">
-      <object>objects\obj_pared</object>
-      <object>objects\obj_pared_metal</object>
-      <object>objects\obj_piedras</object>
-      <object>objects\obj_pinchos</object>
-      <object>objects\obj_campfire</object>
-      <object>objects\obj_campfire_off</object>
-      <object>objects\obj_fuego</object>
-      <object>objects\obj_poop</object>
-      <object>objects\obj_poop_off</object>
-      <object>objects\obj_moneda</object>
-      <object>objects\obj_llave</object>
-      <object>objects\obj_corazon</object>
-      <object>objects\obj_tienda</object>
-      <object>objects\obj_tienda_rota</object>
-    </objects>
-    <objects name="enemigos">
-      <object>objects\obj_boss_1</object>
-      <object>objects\obj_boss_2</object>
-      <object>objects\obj_boss_3</object>
-      <object>objects\obj_enemigo_1</object>
-      <object>objects\obj_enemigo_2</object>
-      <object>objects\obj_enemigo_3</object>
-      <object>objects\obj_enemigo_4</object>
-      <object>objects\obj_enemigo_5</object>
-      <object>objects\obj_enemigo_6</object>
-      <object>objects\obj_enemigo_7</object>
-      <object>objects\obj_enemigo_8</object>
-      <object>objects\obj_cabeza_enemigo</object>
-      <object>objects\obj_disparo_enemigo</object>
-      <object>objects\obj_sombra_enemigo</object>
+      <object>objects\oWall</object>
+      <object>objects\oRock</object>
+      <object>objects\oSpikes</object>
+      <object>objects\oCampfire</object>
+      <object>objects\oFire</object>
+      <object>objects\oPoop</object>
+      <object>objects\oCoin</object>
+      <object>objects\oKey</object>
+      <object>objects\oHeart</object>
+      <object>objects\oDonation</object>
     </objects>
     <objects name="Power Ups">
-      <object>objects\obj_Powerup_text</object>
-      <object>objects\obj_pedestal</object>
-      <objects name="donacion">
-        <object>objects\obj_vida_1</object>
-        <object>objects\obj_speed_3</object>
-        <object>objects\obj_rango_2</object>
-      </objects>
-      <objects name="tesoro">
-        <object>objects\obj_stats_up_1</object>
-        <object>objects\obj_vida_2</object>
-        <object>objects\obj_vida_3</object>
-        <object>objects\obj_damage_1</object>
-        <object>objects\obj_damage_2</object>
-        <object>objects\obj_rango_3</object>
-        <object>objects\obj_rango_1</object>
-        <object>objects\obj_attack_speed_3</object>
-        <object>objects\obj_attack_speed_2</object>
-        <object>objects\obj_speed_2</object>
-      </objects>
-      <objects name="boss">
-        <object>objects\obj_ketchup</object>
-        <object>objects\obj_speed_1</object>
-        <object>objects\obj_damage_3</object>
-        <object>objects\obj_attack_speed_1</object>
-      </objects>
-      <objects name="extras">
-        <object>objects\obj_passives</object>
-        <object>objects\obj_trail</object>
-      </objects>
+      <object>objects\oPowerUp</object>
+      <object>objects\oPowerUp1</object>
+      <object>objects\oPowerUp2</object>
+      <object>objects\oPowerUp3</object>
+      <object>objects\oPowerUp4</object>
+      <object>objects\oPowerUp5</object>
+      <object>objects\oPowerUp6</object>
+      <object>objects\oPowerUp7</object>
+      <object>objects\oPowerUp8</object>
+      <object>objects\oPowerUp9</object>
+      <object>objects\oPowerUp10</object>
+      <object>objects\oPowerUp11</object>
+      <object>objects\oPowerUp12</object>
+      <object>objects\oPowerUp13</object>
+      <object>objects\oPowerUp14</object>
+      <object>objects\oPowerUp15</object>
+      <object>objects\oPowerUp16</object>
+      <object>objects\oPowerUp17</object>
     </objects>
-    <object>objects\obj_puerta_bossfinal</object>
   </objects>
   <rooms name="rooms">
     <rooms name="creadores">
       <room>rooms\rm_menu</room>
       <room>rooms\rm_seed</room>
       <room>rooms\rm_inicio</room>
+      <room>rooms\rm_pause</room>
     </rooms>
   </rooms>
   <help>

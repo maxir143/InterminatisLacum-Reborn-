@@ -1,17 +1,12 @@
 ///movimiento (levitar)
-if (y > yy - 7) && bajar = false
-{
+if (y > yy - 7) && bajar = false{
     y -= .2  
-}
-else
-{
+}else{
     bajar = true
 }
-if bajar = true && !(y > yy)
-{
+
+if bajar = true && !(y > yy){
     y += .2
-}
-else
-{
+}else{
     bajar = false
 }
