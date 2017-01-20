@@ -28,10 +28,11 @@
   </sounds>
   <sprites name="sprites">
     <sprites name="enemigos">
+      <sprite>sprites\sEnemyShadow</sprite>
+      <sprite>sprites\sEnemyBody</sprite>
       <sprite>sprites\sprite40</sprite>
       <sprite>sprites\sprite55</sprite>
       <sprite>sprites\spr_enemigo_cuerpo_1</sprite>
-      <sprite>sprites\sprite68</sprite>
       <sprite>sprites\sprite69</sprite>
       <sprite>sprites\sprite12</sprite>
       <sprite>sprites\sprite66</sprite>
@@ -71,6 +72,7 @@
       <sprite>sprites\sCoin</sprite>
       <sprite>sprites\sHeart</sprite>
       <sprite>sprites\sKey</sprite>
+      <sprite>sprites\sBomb</sprite>
       <sprite>sprites\sCampfire</sprite>
       <sprite>sprites\sFire</sprite>
       <sprite>sprites\sDonation</sprite>
@@ -157,7 +159,12 @@
       <script>scripts\scrDrawStats.gml</script>
     </scripts>
     <scripts name="Enemy">
-      <script>scripts\scrEnemyMove.gml</script>
+      <scripts name="move">
+        <script>scripts\scrEnemyMove.gml</script>
+        <script>scripts\scrGridEnemyCreate.gml</script>
+        <script>scripts\scrGridEnemyUpdate.gml</script>
+        <script>scripts\scrGridEnemyDestroy.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Extra">
       <scripts name="Clock">
@@ -202,12 +209,6 @@
         <object>objects\oPause</object>
       </objects>
     </objects>
-    <objects name="Player">
-      <object>objects\oPlayerHead</object>
-      <object>objects\oPlayerBody</object>
-      <object>objects\oPlayer</object>
-      <object>objects\oTear</object>
-    </objects>
     <objects name="mascaras">
       <object>objects\obj_enemigo</object>
       <object>objects\oSolid</object>
@@ -215,10 +216,20 @@
       <object>objects\oButtonMask</object>
       <object>objects\oEnemy</object>
     </objects>
-    <objects name="puertas">
-      <object>objects\oDoor</object>
+    <objects name="Player">
+      <object>objects\oPlayerHead</object>
+      <object>objects\oPlayerBody</object>
+      <object>objects\oPlayer</object>
+      <object>objects\oTear</object>
+    </objects>
+    <objects name="Enemy">
+      <object>objects\oEnemyGround</object>
+      <object>objects\oEnemyBody1</object>
     </objects>
     <objects name="escenario">
+      <objects name="puertas">
+        <object>objects\oDoor</object>
+      </objects>
       <object>objects\oWall</object>
       <object>objects\oRock</object>
       <object>objects\oSpikes</object>
@@ -229,6 +240,7 @@
       <object>objects\oKey</object>
       <object>objects\oHeart</object>
       <object>objects\oDonation</object>
+      <object>objects\oBomb</object>
     </objects>
     <objects name="Power Ups">
       <object>objects\oPowerUp</object>

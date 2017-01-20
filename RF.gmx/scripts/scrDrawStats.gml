@@ -7,6 +7,7 @@ Stats[3] = oPlayer.Damage
 Stats[4] = oPlayer.Range
 Stats[5] = oPlayer.Speed
 Stats[6] = oPlayer.Luck
+Stats[7] = fps_real
 
 var TotalStats = array_length_1d(Stats)
 

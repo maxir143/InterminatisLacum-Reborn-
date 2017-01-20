@@ -37,6 +37,7 @@ Speed       = 10;
 SSize       = 1;
 TSize       = 1;
 Luck        = 0;
+BombTime    = room_speed * 2
 //objetos base
 Coins       = 0;
 Keys        = 0;
@@ -356,6 +357,29 @@ draw_rectangle(6,7,205,28,true)
 draw_sprite(spr_moneda,1,16,16)  draw_text(40,17,":" + string(monedas))
 draw_sprite(spr_llaves,0,73,18)  draw_text(98,17,":" + string(llaves))
 draw_sprite(spr_corazones,1,129,19)  draw_text(168,17,":" + string(Hp) + "-"+ string(Hp_max))
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="10" enumb="38">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_create(x,y,oBomb)
 </string>
           </argument>
         </arguments>

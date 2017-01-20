@@ -1,3 +1,14 @@
+///scrEnemyMove(Grid,objectiveX,objectiveY,Speed)
+GridEnemy = path_add()
+mp_grid_path(argument0,GridEnemy,x,y,argument1,argument2,true)
+path_start(GridEnemy,argument3/10,0,0)
+
+
+
+
+
+
+/*
 HS = sign(oPlayer.x - x)
 VS = sign(oPlayer.y - y)  
 

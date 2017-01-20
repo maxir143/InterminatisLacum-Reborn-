@@ -56,6 +56,9 @@ Debug = true
 global.seed = 0;
 randomize();
 
+//enemy grid
+global.GridGE = 0
+global.GridFE = 0
 
 ///seed
 globalvar Seed1,Seed2,Seed3,Seed4;
@@ -183,6 +186,38 @@ if ClockM = 60 {
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Enemy Grid (Ground / Fly)
+scrGridEnemyCreate(global.GridGE)
+scrGridEnemyCreate(global.GridFE)
+
+
+//Add objects
+scrGridEnemyUpdate(global.GridGE,oSolid)
+scrGridEnemyUpdate(global.GridFE,oWall)
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -212,6 +247,26 @@ draw_set_halign(fa_left)
 draw_set_font(fnt_debug)
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
